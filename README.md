@@ -4,9 +4,8 @@
 - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-public-private-vpc.html
 - https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenario2.html
 
-2. We need to have another public subnet (in the AZ where we have the private subnet) for this to work with a load balancer
+2. We need to have another public subnet (in the AZ where we have the private subnet) for this to work with a load balancer. So go ahead and create that. Refer why below:
 - https://aws.amazon.com/premiumsupport/knowledge-center/public-load-balancer-private-ec2/
-So go ahead and create that.
 
 3. Create the EC2 in the Private Network. 
 4. Use a Bastion EC2 in the Public subnet to connect to the EC2 in private Network 
