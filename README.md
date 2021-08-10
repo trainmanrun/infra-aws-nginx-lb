@@ -14,7 +14,11 @@ ssh-add <AWS Key.pem>
 ssh -A ec2-user@<Bastion EC2 in Pub NW>
 ssh ec2-user@<To be ngnix EC2 in Pri NW>
 ```
-5. Install ngnix on it by following [infra-aws-nginx-secure](https://github.com/trainmanrun/infra-aws-nginx-secure) repo.
+5. Install ngnix on it 
+```
+sudo amazon-linux-extras install -y nginx1
+sudo systemctl restart nginx
+```
 
 6. Create a load balancer by reviewing the documents below
 - https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-create-https-ssl-load-balancer.html
